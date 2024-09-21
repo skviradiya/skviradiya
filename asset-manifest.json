@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/skviradiya/static/css/main.f855e6bc.css",
+    "main.js": "/skviradiya/static/js/main.653890ba.js",
+    "static/js/453.712a81e0.chunk.js": "/skviradiya/static/js/453.712a81e0.chunk.js",
+    "static/media/logo.svg": "/skviradiya/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/skviradiya/index.html",
+    "main.f855e6bc.css.map": "/skviradiya/static/css/main.f855e6bc.css.map",
+    "main.653890ba.js.map": "/skviradiya/static/js/main.653890ba.js.map",
+    "453.712a81e0.chunk.js.map": "/skviradiya/static/js/453.712a81e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.653890ba.js"
+  ]
+}
