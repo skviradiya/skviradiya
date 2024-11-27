@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/skviradiya/static/css/main.5f27edfc.css",
-    "main.js": "/skviradiya/static/js/main.3e39b321.js",
+    "main.css": "/skviradiya/static/css/main.5b668fed.css",
+    "main.js": "/skviradiya/static/js/main.8e22e2f1.js",
     "index.html": "/skviradiya/index.html",
-    "main.5f27edfc.css.map": "/skviradiya/static/css/main.5f27edfc.css.map",
-    "main.3e39b321.js.map": "/skviradiya/static/js/main.3e39b321.js.map"
+    "main.5b668fed.css.map": "/skviradiya/static/css/main.5b668fed.css.map",
+    "main.8e22e2f1.js.map": "/skviradiya/static/js/main.8e22e2f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f27edfc.css",
-    "static/js/main.3e39b321.js"
+    "static/css/main.5b668fed.css",
+    "static/js/main.8e22e2f1.js"
   ]
 }
