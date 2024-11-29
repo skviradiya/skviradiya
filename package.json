@@ -1,11 +1,12 @@
 {
-  "name": "skviradiya",
+  "name": "skviradiya.github.io",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://skviradiya.github.io/skviradiya",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && next export",
+    "deploy": "npm run build && gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
