@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   basePath: '/skviradiya',
   images: {
     unoptimized: true,
-    path: '/skviradiya'
   },
 };
 
