@@ -45,7 +45,7 @@ export default function AboutPage() {
             >
               <div className="relative aspect-square overflow-hidden rounded-xl border-4 border-green-500">
                 <Image
-                  src="/profile.jpg"
+                  src={`${process.env.basePath}/profile.jpg`}
                   alt="Shravan Viradiya"
                   fill
                   className="object-cover"
