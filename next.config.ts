@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 export const isProduction = process.env.NODE_ENV === "production";
 
 console.log("Testing",process.env.basePath)
-console.log("11Testing",process.env.NODE_ENV)
+
 const nextConfig: NextConfig = {
   output: 'export',
   // reactStrictMode: true,

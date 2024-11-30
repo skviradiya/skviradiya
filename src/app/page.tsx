@@ -35,7 +35,9 @@ export default function Home() {
               <h1 className="text-4xl  sm:text-6xl">
                 <span className="text-green-500">Hello, I'm</span>
                 <br />
-                Shravan Viradiya
+                Shravan Viradiya{"\n"}
+                {process.env.NODE_ENV}
+                {process.env.basePath}
               </h1>
               <p className="mt-6 text-xl text-white/60">
                 React Native Developer with 3+ years of experience in
