@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+export const isProduction = process.env.NODE_ENV === "production";
+
 
 const nextConfig: NextConfig = {
   output: 'export',
@@ -6,8 +8,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Necessary if you use Next.js image component
   },
-  basePath: '/skviradiya',
-  assetPrefix: '/skviradiya/',
+  basePath: isProduction?process.env.basePath:'',
+  assetPrefix:isProduction? process.env.basePath:'',
   env: {
     basePath: process.env.basePath,
   },
