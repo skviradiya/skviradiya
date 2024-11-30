@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Necessary if you use Next.js image component
   },
-  basePath: '/skviradiya',
-  assetPrefix: '/skviradiya',
+  // basePath: '/skviradiya',
+  // assetPrefix: '/skviradiya',
 };
 
 module.exports = nextConfig;
