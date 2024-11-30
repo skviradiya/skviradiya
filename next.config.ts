@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   },
   basePath: '/skviradiya',
   assetPrefix: '/skviradiya/',
+  env: {
+    basePath: process.env.basePath,
+  },
 };
 
 module.exports = nextConfig;
