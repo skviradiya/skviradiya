@@ -9,7 +9,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Project } from "@/data/projects";
 
 export function ProjectCard({
-  id,
   title,
   description,
   image,

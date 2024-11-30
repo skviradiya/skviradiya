@@ -67,7 +67,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          My Projects
+          Projects
         </motion.h1>
         <motion.div
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
             },
           }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               variants={{

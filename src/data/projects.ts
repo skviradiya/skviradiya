@@ -1,5 +1,3 @@
-import { StaticImageData } from 'next/image'
-
 export interface Project {
   id: string;
   title: string;
@@ -41,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     id: "nettpage",
-     title: "Nettpage",
+    title: "Nettpage",
     description:
       "A mobile application that combines e-commerce and social media features, allowing users to browse, purchase, and sell products while interacting with other users.",
     image: "/assets/images/nettpage.webp?height=400&width=600",
