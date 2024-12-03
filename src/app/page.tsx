@@ -8,7 +8,6 @@ import { ArrowRight } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
 import { Nav } from "@/components/nav";
-import "@/data/projects";
 
 const technologies = [
   "React Native",
@@ -77,7 +76,7 @@ export default function Home() {
             >
               <div className="relative aspect-square overflow-hidden rounded-full border-4 border-green-500">
                 <Image
-                  src={`${process.env.BASE_PATH || ""}/profile.jpg`}
+                  src={`/profile.jpg`}
                   alt="Shravan Viradiya"
                   fill
                   className="object-cover"
