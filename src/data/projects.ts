@@ -1,5 +1,3 @@
-import { getImagePath } from "@/lib/utils";
-
 export interface Project {
   id: string;
   title: string;
@@ -17,8 +15,7 @@ export const projects: Project[] = [
     title: "Birla Opus ID",
     description:
       "A contractor portal app for Aditya Birla Group with features like Adobe Analytics integration, Clever Tap integration, and advanced QR scanning capabilities.",
-    // image: `${process.env.BASE_PATH || ""}/assets/images/birla-opus-id.webp?height=400&width=600`,
-    image: getImagePath('birla-opus-id.webp?height=400&width=600'),
+    image: `${await process.env.BASE_PATH || ""}/assets/images/birla-opus-id.webp?height=400&width=600`,
     link: "/projects/birla-opus",
     playStoreLink:
       "https://play.google.com/store/apps/details?id=com.birlaopusid.contractorportal",
@@ -45,8 +42,7 @@ export const projects: Project[] = [
     title: "Nettpage",
     description:
       "A mobile application that combines e-commerce and social media features, allowing users to browse, purchase, and sell products while interacting with other users.",
-    // image: `${process.env.BASE_PATH || ""}/assets/images/nettpage.webp?height=400&width=600`,
-    image: getImagePath('nettpage.webp?height=400&width=600'),
+    image: `${await process.env.BASE_PATH || ""}/assets/images/nettpage.webp?height=400&width=600`,
     link: "/projects/nettpage",
     playStoreLink:
       "https://play.google.com/store/apps/details?id=com.app.nettpage",
@@ -73,8 +69,7 @@ export const projects: Project[] = [
     title: "TipOff",
     description:
       "A word guessing game app featuring video conference gameplay capabilities.",
-    // image: `${process.env.BASE_PATH || ""}/assets/images/tipoff.png?height=400&width=600`,
-    image: getImagePath('tipoff.png?height=400&width=600'),
+    image: `${await process.env.BASE_PATH || ""}/assets/images/tipoff.png?height=400&width=600`,
     link: "/projects/tipoff",
     playStoreLink:
       "https://apps.apple.com/us/app/tipoff-word-guessing-game/id1110306961",
@@ -100,8 +95,7 @@ export const projects: Project[] = [
     title: "WeSmoke",
     description:
       "A social media app combining various features such as podcasting, chatting, and media posting.",
-    // image: `${process.env.BASE_PATH || ""}/assets/images/wesmoke.png?height=400&width=600`,
-    image: getImagePath('wesmoke.png?height=400&width=600'),
+    image: `${await process.env.BASE_PATH || ""}/assets/images/wesmoke.png?height=400&width=600`,
     link: "/projects/wesmoke",
     playStoreLink: "https://apps.apple.com/us/app/wesmoke/id1577787304",
     technologies: [
@@ -127,8 +121,7 @@ export const projects: Project[] = [
      title: "Satsang App",
     description:
       "An app for managing and analyzing large data sets with comprehensive CRUD operations.",
-    // image: `${process.env.BASE_PATH || ""}/assets/images/satsang.webp?height=400&width=600&resize=true`,
-    image: getImagePath('satsang.webp?height=400&width=600&resize=true'),
+    image: `${await process.env.BASE_PATH || ""}/assets/images/satsang.webp?height=400&width=600&resize=true`,
     link: "/projects/satsang",
     playStoreLink:
       "https://play.google.com/store/apps/details?id=com.baps_yuva",
