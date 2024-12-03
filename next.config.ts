@@ -2,9 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: "/skviradiya",
+  basePath: process.env.BASE_PATH,
+  assetPrefix: process.env.BASE_PATH,
+
   images: {
     unoptimized: true,
+    path :process.env.BASE_PATH
   },
 };
 
