@@ -8,6 +8,7 @@ import { ArrowRight } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
 import { Nav } from "@/components/nav";
+import "@/data/projects";
 
 const technologies = [
   "React Native",
