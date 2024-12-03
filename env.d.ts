@@ -1,6 +1,6 @@
 namespace NodeJS {
   interface ProcessEnv {
-    basePath: string;
+    BASE_PATH: string;
     
   }
 }

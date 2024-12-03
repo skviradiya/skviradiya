@@ -37,22 +37,8 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-4xl"
         >
-          <div className="grid gap-12 md:grid-cols-[2fr_3fr]">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="relative aspect-square overflow-hidden rounded-xl border-4 border-green-500">
-                <Image
-                  src={`/skviradiya/profile.jpg`}
-                  alt="Shravan Viradiya"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </motion.div>
-            <div>
+          <div className="grid gap-8">
+            <div className="w-full">
               <motion.h1
                 className="text-4xl font-bold text-green-500"
                 initial={{ opacity: 0, y: -20 }}

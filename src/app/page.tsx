@@ -76,7 +76,7 @@ export default function Home() {
             >
               <div className="relative aspect-square overflow-hidden rounded-full border-4 border-green-500">
                 <Image
-                  src={`/skviradiya/profile.jpg`}
+                  src={`${process.env.BASE_PATH || ""}/profile.jpg`}
                   alt="Shravan Viradiya"
                   fill
                   className="object-cover"
