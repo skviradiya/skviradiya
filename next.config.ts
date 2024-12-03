@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     localPatterns: [
       {
-        pathname: process.env.BASE_PATH,
+        pathname: `${process.env.BASE_PATH}/**`,
         search: '',
       },
     ],
