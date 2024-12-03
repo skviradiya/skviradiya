@@ -7,7 +7,12 @@ const nextConfig: NextConfig = {
 
   images: {
     unoptimized: true,
-    path :process.env.BASE_PATH
+    localPatterns: [
+      {
+        pathname: process.env.BASE_PATH,
+        search: '',
+      },
+    ],
   },
 };
 
