@@ -20,13 +20,13 @@ const contactInfo = [
     content: "shravanviradiyakb@gmail.com",
     delay: 0.4,
   },
-  {
-    icon: MapPin,
-    title: "Address",
-    content:
-      "49, Nilamnagar banglows-2, Shyamdham chowk, nana varachha, surat-395006, Gujarat India",
-    delay: 0.6,
-  },
+  // {
+  //   icon: MapPin,
+  //   title: "Address",
+  //   content:
+  //     "49, Nilamnagar banglows-2, Shyamdham chowk, nana varachha, surat-395006, Gujarat India",
+  //   delay: 0.6,
+  // },
 ];
 
 export default function ContactPage() {
