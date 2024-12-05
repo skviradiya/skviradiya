@@ -9,6 +9,7 @@ import { AnimatedBackground } from "@/components/animated-background";
 import { Button } from "@/components/ui/button";
 import { Nav } from "@/components/nav";
 
+export const basePath = process.env.BASE_PATH || "";
 const technologies = [
   "React Native",
   "TypeScript",
@@ -76,7 +77,7 @@ export default function Home() {
             >
               <div className="relative aspect-square overflow-hidden rounded-full border-4 border-green-500">
                 <Image
-                  src={`/profile.jpg`}
+                  src={`${basePath}/profile.jpg`}
                   alt="Shravan Viradiya"
                   fill
                   className="object-cover"
