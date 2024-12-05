@@ -24,7 +24,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   useEffect(() => {
     const path = process.env.BASE_PATH || "";
     setBasePath(path);
-  }, []);
+  }, [process.env.BASE_PATH]);
   if (!project) {
     return <div>Project not found</div>;
   }

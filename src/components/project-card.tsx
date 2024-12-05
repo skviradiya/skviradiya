@@ -21,7 +21,7 @@ export function ProjectCard({
   useEffect(() => {
     const path = process.env.BASE_PATH || "";
     setBasePath(path);
-  }, []);
+  }, [process.env.BASE_PATH]);
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Link href={link} passHref legacyBehavior>
