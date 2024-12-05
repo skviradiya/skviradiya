@@ -32,7 +32,7 @@ export function ProjectCard({
           <CardContent>
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src={basePath + image}
+                src={"/skviradiya" + image}
                 alt={title}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
