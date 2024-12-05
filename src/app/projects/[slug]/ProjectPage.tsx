@@ -45,7 +45,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mt-8">
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src={project.image}
+                src={process.env.BASE_PATH + project.image}
                 alt={project.title}
                 fill
                 className="object-cover"

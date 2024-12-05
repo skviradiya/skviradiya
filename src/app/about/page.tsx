@@ -97,7 +97,7 @@ export default function AboutPage() {
                     <h3 className="font-semibold text-green-500">
                       Eastern Techno Solutions | React Native Developer
                     </h3>
-                    <p className="text-sm text-white/60">Oct 2023 - Present</p>
+                    <p className="text-sm text-white/60">Oct 2023 - Nov 2024</p>
                     <ul className="mt-2 list-inside list-disc space-y-2 text-white/60">
                       <li>
                         Worked on Birla Opus ID app, an Aditya Birla Group
