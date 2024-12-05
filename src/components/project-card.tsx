@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Project } from "@/data/projects";
-import { useEffect, useState } from "react";
 
 export function ProjectCard({
   title,
@@ -16,12 +15,6 @@ export function ProjectCard({
   link,
   playStoreLink,
 }: Project) {
-  const [basePath, setBasePath] = useState("");
-
-  useEffect(() => {
-    const path = process.env.BASE_PATH || "";
-    setBasePath(path);
-  }, [process.env.BASE_PATH]);
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Link href={link} passHref legacyBehavior>

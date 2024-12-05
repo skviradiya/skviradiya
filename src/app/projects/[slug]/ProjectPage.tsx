@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 
 import { AnimatedBackground } from "@/components/animated-background";
 import { Nav } from "@/components/nav";
 import { projects } from "@/data/projects";
-import React, { useEffect, useState } from "react";
+import React from "react";
 interface ProjectPageProps {
   params: Promise<{
     slug: string; // slug is the dynamic parameter from the URL
@@ -17,14 +17,9 @@ interface ProjectPageProps {
 
 export default function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = React.use(params);
-  const [basePath, setBasePath] = useState("");
 
   const project = projects.find((p) => p.id === slug);
 
-  useEffect(() => {
-    const path = process.env.BASE_PATH || "";
-    setBasePath(path);
-  }, [process.env.BASE_PATH]);
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -50,7 +45,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mt-8">
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src={basePath + project.image}
+                src={project.image}
                 alt={project.title}
                 fill
                 className="object-cover"
