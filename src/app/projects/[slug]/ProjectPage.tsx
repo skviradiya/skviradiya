@@ -8,7 +8,7 @@ import { ArrowLeft } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Nav } from "@/components/nav";
 import { projects } from "@/data/projects";
-import React from "react";
+import React, { useEffect, useState } from "react";
 interface ProjectPageProps {
   params: Promise<{
     slug: string; // slug is the dynamic parameter from the URL
@@ -17,9 +17,14 @@ interface ProjectPageProps {
 
 export default function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = React.use(params);
+  const [basePath, setBasePath] = useState("");
 
   const project = projects.find((p) => p.id === slug);
 
+  useEffect(() => {
+    const path = process.env.BASE_PATH || "";
+    setBasePath(path);
+  }, []);
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -45,7 +50,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mt-8">
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src={process.env.BASE_PATH + project.image}
+                src={basePath + project.image}
                 alt={project.title}
                 fill
                 className="object-cover"

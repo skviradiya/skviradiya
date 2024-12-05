@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Project } from "@/data/projects";
+import { useEffect, useState } from "react";
 
 export function ProjectCard({
   title,
@@ -15,6 +16,12 @@ export function ProjectCard({
   link,
   playStoreLink,
 }: Project) {
+  const [basePath, setBasePath] = useState("");
+
+  useEffect(() => {
+    const path = process.env.BASE_PATH || "";
+    setBasePath(path);
+  }, []);
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Link href={link} passHref legacyBehavior>
@@ -25,7 +32,7 @@ export function ProjectCard({
           <CardContent>
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src={process.env.BASE_PATH + image}
+                src={basePath + image}
                 alt={title}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
