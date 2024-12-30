@@ -25,8 +25,8 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <AnimatedBackground />
       <Nav />
-      <main className="container mx-auto px-4 pt-32">
-        <div className="mx-auto max-w-4xl">
+      <main className="container mx-auto px-4 pt-32 flex flex-col justify-center min-h-screen">
+        <div className="mx-auto max-w-5xl p-4">
           <div className="grid gap-12 md:grid-cols-[3fr_2fr]">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

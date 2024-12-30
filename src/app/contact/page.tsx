@@ -31,7 +31,7 @@ const contactInfo = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-hidden">
       <AnimatedBackground />
       <Nav />
       <main className="container mx-auto px-4 pt-32">
@@ -68,11 +68,11 @@ export default function ContactPage() {
               >
                 <Card className="border-white/10 bg-black/50 overflow-hidden">
                   <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-wrap gap-4">
                       <div className="rounded-full bg-green-500/10 p-3">
                         <item.icon className="h-6 w-6 text-green-500" />
                       </div>
-                      <div>
+                      <div style={{ flexDirection: "column" }}>
                         <h2 className="font-semibold text-green-500">
                           {item.title}
                         </h2>

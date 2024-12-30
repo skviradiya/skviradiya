@@ -28,7 +28,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     <div className="min-h-screen bg-black text-white">
       <AnimatedBackground />
       <Nav />
-      <main className="container mx-auto px-4 pt-32">
+      <main className="container mx-auto px-4 pt-32 pb-32">
         <Link
           href="/projects"
           className="mb-8 inline-flex items-center text-white/60 hover:text-white"

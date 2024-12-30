@@ -30,12 +30,12 @@ export default function AboutPage() {
     <div className="min-h-screen bg-black text-white">
       <AnimatedBackground />
       <Nav />
-      <main className="container mx-auto px-4 pt-32">
+      <main className="container mx-auto px-4 pt-32 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-4xl"
+          className="mx-auto max-w-5xl p-4"
         >
           <div className="grid gap-8">
             <div className="w-full">

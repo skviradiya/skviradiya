@@ -12,7 +12,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-black text-white">
       <AnimatedBackground />
       <Nav />
-      <main className="container mx-auto px-4 pt-32">
+      <main className="container mx-auto px-4 pt-32 pb-32">
         <motion.h1
           className="mb-12 text-center text-4xl font-bold"
           initial={{ opacity: 0, y: -20 }}
