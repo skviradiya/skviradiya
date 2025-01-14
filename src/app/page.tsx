@@ -76,12 +76,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <div className="relative aspect-square overflow-hidden rounded-full border-4 border-green-500">
-                <Image
-                  src={profileImage}
-                  alt="Shravan Viradiya"
-                  fill
-                  className="object-cover"
-                />
+                <Image src={profileImage} alt="Shravan Viradiya" />
               </div>
             </motion.div>
           </div>
