@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Welcome! 👋
 
-## Getting Started
+## About Me
+Hi there! I'm **Shravan Viradiya**, a passionate and experienced **React Native Developer**. I specialize in building robust, scalable, and user-friendly mobile applications. My focus is on creating seamless digital experiences through innovative solutions.
 
-First, run the development server:
+- 🌍 Based in: Gujarat, India
+- ⚡ Fun fact: I love solving complex problems and continuously learning new technologies!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Skills & Expertise
+Here are some of the tools, technologies, and skills I bring to the table:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Programming Languages
+- **TypeScript**
+- **JavaScript**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frameworks & Libraries
+- **React Native**
+- **Redux**
 
-## Learn More
+### Tools
+- **Android Studio**
+- **Xcode**
+- **Visual Studio Code**
+- **CI/CD**
+- **Git**
 
-To learn more about Next.js, take a look at the following resources:
+### Other Skills
+- REST APIs
+- Adobe Analytics
+- CleverTap
+- Azure DevOps CI/CD
+- Push Notifications
+- VAPT Handling
+- QR Scanning
+- OCR Packages
+- Managing Flavors for Different Environments
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌟 GitHub Stats
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=skviradiya&show_icons=true&hide_title=true&count_private=true&theme=radical)
 
-## Deploy on Vercel
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=skviradiya&layout=compact&theme=radical)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Let's Connect
+I’m always open to exciting opportunities and collaborations. Let’s connect and create something amazing together:
+
+- 📧 Email: [shravanviradiyakb@gmail.com](mailto:shravanviradiyakb@gmail.com)
+- 💼 LinkedIn: [Shravan Viradiya](https://www.linkedin.com/in/shravan-viradiya-2b0195233)
+- 🌐 Portfolio: [https://skviradiya.github.io/skviradiya/](https://skviradiya.github.io/skviradiya/)
+
+Thank you for visiting my portfolio! 😊
