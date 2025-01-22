@@ -3,7 +3,6 @@
 ## About Me
 Hi there! I'm **Shravan Viradiya**, a passionate and experienced **React Native Developer**. I specialize in building robust, scalable, and user-friendly mobile applications. My focus is on creating seamless digital experiences through innovative solutions.
 
-- 🌍 Based in: Gujarat, India
 - ⚡ Fun fact: I love solving complex problems and continuously learning new technologies!
 
 ---
