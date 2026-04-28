@@ -12,6 +12,8 @@ export function AnimatedBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    let animationFrameId: number;
+
     // Set canvas size
     const resizeCanvas = () => {
       if (
@@ -26,65 +28,67 @@ export function AnimatedBackground() {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Particle system
-    const particles: Array<{
+    const gridSize = 25;
+    const colors = ["rgba(6, 182, 212,", "rgba(139, 92, 246,"]; // Cyan & Purple base
+
+    interface Pixel {
       x: number;
       y: number;
-      dx: number;
-      dy: number;
       size: number;
-    }> = [];
+      life: number;
+      maxLife: number;
+      color: string;
+    }
 
-    // Create particles
-    for (let i = 0; i < 50; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        dx: (Math.random() - 0.5) * 0.5,
-        dy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2,
+    const pixels: Pixel[] = [];
+    // Responsive amount based on screen size
+    const numPixels = Math.floor(
+      (window.innerWidth * window.innerHeight) / 12000,
+    );
+
+    const createPixel = (): Pixel => {
+      return {
+        x: Math.floor(Math.random() * (canvas.width / gridSize)) * gridSize,
+        y: Math.floor(Math.random() * (canvas.height / gridSize)) * gridSize,
+        size: Math.random() > 0.5 ? 2 : 3,
+        life: 0,
+        maxLife: Math.random() * 200 + 100, // Frames
+        color: colors[Math.floor(Math.random() * colors.length)],
+      };
+    };
+
+    // Initialize pixels
+    for (let i = 0; i < numPixels; i++) {
+      pixels.push({
+        ...createPixel(),
+        life: Math.random() * 200, // stagger starts so they don't fade together
       });
     }
 
     // Animation function
     const animate = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach((particle) => {
-        particle.x += particle.dx;
-        particle.y += particle.dy;
+      pixels.forEach((p, index) => {
+        p.life++;
 
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.dx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.dy *= -1;
+        if (p.life > p.maxLife) {
+          // Respawn pixel when its life ends
+          pixels[index] = createPixel();
+        } else {
+          // Smooth fade in and out using Sine wave
+          const opacity = Math.sin((p.life / p.maxLife) * Math.PI) * 0.8;
 
-        // Draw particle
-        ctx.fillStyle = "rgba(100, 100, 255, 0.5)";
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+          ctx.fillStyle = `${p.color} ${opacity})`;
+          ctx.shadowBlur = 15;
+          ctx.shadowColor = `${p.color} ${opacity})`;
 
-        // Draw connections
-        particles.forEach((otherParticle) => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 100) {
-            ctx.strokeStyle = `rgba(100, 100, 255, ${
-              0.2 * (1 - distance / 100)
-            })`;
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.stroke();
-          }
-        });
+          ctx.fillRect(p.x, p.y, p.size, p.size);
+        }
       });
 
       // Continue the animation loop
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     };
 
     // Start animation
@@ -93,13 +97,14 @@ export function AnimatedBackground() {
     // Cleanup function to remove the event listener and cancel animation frame
     return () => {
       window.removeEventListener("resize", resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 -z-10 h-screen w-screen bg-black"
+      className="fixed inset-0 pointer-events-none z-0 mix-blend-screen h-screen w-screen"
     />
   );
 }

@@ -1,18 +1,121 @@
-import { birlaOpusImage, nettpageImage, satsangAppImage, tipOffImage, wesmokeImage } from "@/lib/imagesList";
+import {
+  birlaOpusImage,
+  nettpageImage,
+  satsangAppImage,
+  tipOffImage,
+  wesmokeImage,
+} from "@/lib/imagesList";
 import { StaticImageData } from "next/image";
 
 export interface Project {
   id: string;
   title: string;
   description: string;
-  image: StaticImageData;
+  image?: StaticImageData;
   link: string;
   playStoreLink?: string;
   technologies: string[];
   features: string[];
+  category?: "mobile" | "web";
 }
 
 export const projects: Project[] = [
+  {
+    id: "tidymy",
+    title: "TidyMy Vendor-Customer",
+    description:
+      "A comprehensive service platform similar to Urban Company, featuring a Customer App, Vendor App, and responsive landing page for connecting service providers with customers.",
+    link: "/projects/tidymy",
+    technologies: [
+      "React.js",
+      "React Native",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "Stripe",
+    ],
+    features: [
+      "Customer mobile app with service discovery and booking",
+      "Vendor app with real-time job management",
+      "Responsive landing page with React.js",
+      "Real-time notifications and updates",
+      "Secure payment integration",
+      "Rating and review system",
+    ],
+    category: "web",
+  },
+  {
+    id: "pbsa-news",
+    title: "PBSA News & BTR News",
+    description:
+      "A specialized real estate news web application with administrative portal and main website, leveraging React.js and Next.js for optimized SEO and performance.",
+    link: "/projects/pbsa-news",
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "GraphQL",
+    ],
+    features: [
+      "SEO-optimized news listings and article pages",
+      "Administrative portal for content management",
+      "Real-time news updates and notifications",
+      "Advanced search and filtering capabilities",
+      "Multi-tenant architecture",
+      "Performance optimization for fast loading",
+    ],
+    category: "web",
+  },
+  {
+    id: "background-screening",
+    title: "Background Screening System",
+    description:
+      "A secure background verification web and mobile application ensuring strict compliance with UK legal standards for enterprise use.",
+    link: "/projects/background-screening",
+    technologies: [
+      "React.js",
+      "React Native",
+      "Node.js",
+      "PostgreSQL",
+      "AWS",
+      "Role-Based Access Control",
+    ],
+    features: [
+      "Secure background verification process",
+      "UK legal compliance and data protection",
+      "Role-based access control (RBAC)",
+      "Document management and verification",
+      "Audit trails and reporting",
+      "Multi-language support",
+    ],
+    category: "web",
+  },
+  {
+    id: "erp-system",
+    title: "Enterprise Resource Planning (ERP) System",
+    description:
+      "A robust ERP system implementing Role-Based Access Control with dedicated modules for sales, projects, finance, and logistics.",
+    link: "/projects/erp-system",
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "GraphQL",
+      "Redux",
+    ],
+    features: [
+      "Sales module with CRM capabilities",
+      "Project management and tracking",
+      "Financial management and reporting",
+      "Logistics and inventory management",
+      "Advanced reporting and analytics",
+      "Multi-user role-based access control",
+    ],
+    category: "web",
+  },
   {
     id: "birla-opus",
     title: "Birla Opus ID",
@@ -39,6 +142,7 @@ export const projects: Project[] = [
       "Multiple environment configurations using flavors",
       "CI/CD pipeline integration",
     ],
+    category: "mobile",
   },
   {
     id: "nettpage",
@@ -65,8 +169,9 @@ export const projects: Project[] = [
       "Secure payment integration",
       "Scalable backend architecture",
     ],
+    category: "mobile",
   },
-  
+
   {
     id: "tipoff",
     title: "TipOff",
@@ -92,6 +197,7 @@ export const projects: Project[] = [
       "In-app purchases for additional content",
       "Low-latency networking for smooth gameplay",
     ],
+    category: "mobile",
   },
   {
     id: "wesmoke",
@@ -117,11 +223,11 @@ export const projects: Project[] = [
       "Content moderation and reporting system",
       "Analytics dashboard for content creators",
     ],
-    
+    category: "mobile",
   },
   {
     id: "satsang",
-     title: "Satsang App",
+    title: "Satsang App",
     description:
       "An app for managing and analyzing large data sets with comprehensive CRUD operations.",
     image: satsangAppImage,
@@ -144,6 +250,6 @@ export const projects: Project[] = [
       "Push notifications for updates and alerts",
       "Export functionality for reports and data sets",
     ],
+    category: "mobile",
   },
-]
-
+];

@@ -34,7 +34,10 @@ export function Nav() {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between p-4">
-        <Link href="/" className="text-xl font-bold">
+        <Link
+          href="/"
+          className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]"
+        >
           Shravan Viradiya
         </Link>
         <div className="md:hidden">
@@ -48,7 +51,7 @@ export function Nav() {
         <ul
           className={cn(
             "absolute left-0 right-0 top-full flex flex-col items-center gap-4 bg-black/90 p-4 md:relative md:flex md:flex-row md:gap-8 md:bg-transparent md:p-0",
-            isOpen ? "flex" : "hidden md:flex"
+            isOpen ? "flex" : "hidden md:flex",
           )}
         >
           {navItems.map((item) => (
@@ -59,14 +62,14 @@ export function Nav() {
                   "relative block py-2",
                   pathname === item.path
                     ? "text-white"
-                    : "text-white/60 hover:text-white"
+                    : "text-white/60 hover:text-white",
                 )}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
                 {pathname === item.path && (
                   <motion.div
-                    className="absolute bottom-0 left-0 h-0.5 w-full bg-white"
+                    className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 shadow-[0_0_8px_rgba(6,182,212,0.8)]"
                     layoutId="underline"
                   />
                 )}
