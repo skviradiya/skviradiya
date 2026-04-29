@@ -192,6 +192,7 @@ export function ParticleMorph() {
           Math.sin(timestamp + particle.wanderAngle) * particle.wanderRadius;
 
         let scatterX = 0;
+
         let scatterY = 0;
 
         // Only scatter when scrolled down to keep it perfectly formed at the top
