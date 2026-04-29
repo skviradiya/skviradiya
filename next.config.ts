@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/skviradiya",
-  assetPrefix: "/skviradiya/",
+  basePath: process.env.DEPLOY ? "/skviradiya" : "",
   images: {
     unoptimized: true,
   },
